@@ -3,3 +3,7 @@ RefactoringTechniques/packages/
 RefactoringTechniques/RefactoringTechniques/obj/
 RefactoringTechniques/RefactoringTechniques/bin/
 RefactoringTechniques/DuplicatedCode/obj/
+/RefactoringTechniques/.vs/RefactoringTechniques
+/RefactoringTechniques/DuplicatedCode/bin/Debug
+/RefactoringTechniques/UnitTests/bin/Debug
+/RefactoringTechniques/RefactoringTechniques.v11.suo
