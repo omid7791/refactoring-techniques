@@ -1,6 +1,6 @@
 ﻿namespace DuplicatedCode.Interfaces
 {
-    public interface IHat
+    public interface IHat : IProduct
     {
         bool IsAboveStandardVolume();
     }

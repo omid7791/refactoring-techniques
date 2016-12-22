@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using DuplicatedCode.Interfaces;
-using DuplicatedCode.Practice;
 using NUnit.Framework;
 
 namespace UnitTests
@@ -57,56 +56,57 @@ namespace UnitTests
     [TestFixture]
     public class ProductTests
     {
+        public ProductTests()
+        {
+            ObjectFactory.UseRefactoredClasses = true;
+        }
+
         [Test]
         public void ShouldBeAboveStandardVolume()
         {
-            var hat = new Hat
-            {
-                Width = 20,
-                Height = 6,
-                Depth = 5
-            };
+            var hat = ObjectFactory.GetHat();
 
+            hat.Width = 20;
+            hat.Height = 6;
+            hat.Depth = 5;
+           
             Assert.That(hat.IsAboveStandardVolume, Is.True);
         }
 
         [Test]
         public void ShouldNotBeAboveStandardVolume()
         {
-           var hat = new Hat
-            {
-                Width = 20,
-                Height = 3,
-                Depth = 5
-            };
+            var hat = ObjectFactory.GetHat();
 
+            hat.Width = 20;
+            hat.Height = 3;
+            hat.Depth = 5;
+            
             Assert.That(hat.IsAboveStandardVolume, Is.False);
         }
 
         [Test]
         public void ShouldFitIntoTheBox()
         {
-            var hat = new Football
-            {
-                Width = 20,
-                Height = 2,
-                Depth = 5
-            };
+            var football = ObjectFactory.GetFootball();
 
-            Assert.That(hat.CanFitIntoTheBox(205), Is.True);
+            football.Width = 20;
+            football.Height = 2;
+            football.Depth = 5;
+            
+            Assert.That(football.CanFitIntoTheBox(205), Is.True);
         }
 
         [Test]
         public void ShouldNotFitIntoTheBox()
         {
-            var hat = new Football
-            {
-                Width = 20,
-                Height = 2,
-                Depth = 5
-            };
+            var football = ObjectFactory.GetFootball();
 
-            Assert.That(hat.CanFitIntoTheBox(100), Is.False);
+            football.Width = 20;
+            football.Height = 2;
+            football.Depth = 5;
+        
+            Assert.That(football.CanFitIntoTheBox(100), Is.False);
         }
     }
 }
