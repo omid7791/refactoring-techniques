@@ -9,5 +9,10 @@ namespace DuplicatedCode.Refactored
         public decimal Width { get; set; }
         public decimal Height{ get; set; }
         public decimal Depth { get; set; }
+
+        protected decimal GetProductVolume()
+        {
+            return Width * Height * Depth;
+        }
     }
 }

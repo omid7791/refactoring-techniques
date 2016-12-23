@@ -9,10 +9,21 @@ namespace DuplicatedCode.Refactored
         private decimal _unitTotal;
         private const decimal Vat = 0.2m;
         private List<IProduct> _products;
-        private decimal GetTotal() => (_unitTotal - (_unitTotal * Discount));
+        private decimal GetTotal()
+        {
+            return (_unitTotal - (_unitTotal * Discount));
+        }
 
-        public decimal TotalWithVat => GetTotal() + (GetTotal() * Vat);
-        public decimal TotalWithoutVat => GetTotal();
+        public decimal TotalWithVat
+        {
+            get { return GetTotal() + (GetTotal() * Vat); }
+        }
+
+        public decimal TotalWithoutVat
+        {
+            get { return GetTotal(); }
+        }
+
         public decimal Discount { get; set; }
 
         public List<IProduct> GetProducts() => _products;

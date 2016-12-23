@@ -8,7 +8,7 @@ namespace DuplicatedCode.Refactored
 
         public bool IsAboveStandardVolume()
         {
-            var productVolume = Width * Height * Depth;
+            var productVolume = GetProductVolume();
             return productVolume > StandardVolume;
         }
     }

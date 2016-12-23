@@ -2,7 +2,7 @@
 
 namespace DuplicatedCode.Practice
 {
-    public class Product : IProduct
+    public abstract class Product : IProduct
     {
         public string Name { get; set; }
         public decimal Price { get; set; }

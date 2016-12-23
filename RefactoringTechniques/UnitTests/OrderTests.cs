@@ -58,7 +58,7 @@ namespace UnitTests
     {
         public ProductTests()
         {
-            ObjectFactory.UseRefactoredClasses = true;
+            ObjectFactory.UseRefactoredClasses = false;
         }
 
         [Test]

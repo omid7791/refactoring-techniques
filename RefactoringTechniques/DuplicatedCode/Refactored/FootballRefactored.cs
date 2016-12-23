@@ -6,7 +6,7 @@ namespace DuplicatedCode.Refactored
     {
         public bool CanFitIntoTheBox(decimal boxVolume)
         {
-            var productVolume = Width * Height * Depth;
+            var productVolume = GetProductVolume();
             return productVolume < boxVolume;
         }
     }

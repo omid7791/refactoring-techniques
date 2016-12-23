@@ -16,8 +16,8 @@ namespace UnitTests
 
         public static IProduct GetProduct()
         {
-            if (UseRefactoredClasses) return new ProductRefactored();
-            return new Product();
+            if (UseRefactoredClasses) return new HatRefactored();
+            return new Hat();
         }
 
         public static IHat GetHat()
