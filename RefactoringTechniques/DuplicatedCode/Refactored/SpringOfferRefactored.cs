@@ -2,23 +2,23 @@
 
 namespace DuplicatedCode.Refactored
 {
-    public class ChristmasOfferRefactored : OfferBase, IOffer
+    public class SpringOfferRefactored : OfferBase, IOffer
     {
-        public ChristmasOfferRefactored(IOrder order) : base(order) { }
+        public SpringOfferRefactored(IOrder order) : base(order){ }
 
         protected override decimal GetProductsDiscount(decimal baseOfferDiscount)
         {
             Order.GetProducts().ForEach(product =>
             {
-                if (product is IFootball)
-                    baseOfferDiscount += 0.005m;
+                if (product is IHat)
+                    baseOfferDiscount += 0.001m;
             });
             return baseOfferDiscount;
         }
 
         protected override decimal GetBaseOfferDiscount()
         {
-            return 0.10m;
+            return 0.05m;
         }
     }
 }

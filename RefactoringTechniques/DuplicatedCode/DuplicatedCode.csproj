@@ -55,8 +55,10 @@
     <Compile Include="Refactored\ChristmasOfferRefactored.cs" />
     <Compile Include="Refactored\FootballRefactored.cs" />
     <Compile Include="Refactored\HatRefactored.cs" />
+    <Compile Include="Refactored\OfferBase.cs" />
     <Compile Include="Refactored\OrderRefactored.cs" />
     <Compile Include="Refactored\ProductRefactored.cs" />
+    <Compile Include="Refactored\SpringOfferRefactored.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

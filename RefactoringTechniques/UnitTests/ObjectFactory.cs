@@ -31,5 +31,17 @@ namespace UnitTests
             if (UseRefactoredClasses) return new OrderRefactored();
             return new Order();
         }
+
+        public static IOffer GetSpringOffer(IOrder order)
+        {
+            if (UseRefactoredClasses) return new SpringOfferRefactored(order);
+            return new SpringOffer(order);
+        }
+
+        public static IOffer GetChristmasOffer(IOrder order)
+        {
+            if (UseRefactoredClasses) return new ChristmasOfferRefactored(order);
+            return new ChristmasOffer(order);
+        }
     }
 }
