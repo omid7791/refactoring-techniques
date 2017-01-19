@@ -1,17 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ACD8141F-2FD4-4F9B-B53B-EA6F2E89AC80}</ProjectGuid>
+    <ProjectGuid>{74F08331-D3BB-4B6B-A8EB-3C4F811D4909}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UnitTests</RootNamespace>
-    <AssemblyName>UnitTests</AssemblyName>
+    <RootNamespace>DuplicatedSwitches</RootNamespace>
+    <AssemblyName>DuplicatedSwitches</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,10 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=3.4.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.3.4.1\lib\net45\nunit.framework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,26 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ObjectFactory.cs" />
-    <Compile Include="OfferTests.cs" />
-    <Compile Include="OrderTests.cs" />
-    <Compile Include="ProductTests.cs" />
+    <Compile Include="Common\EmployeeType.cs" />
+    <Compile Include="Interfaces\IEmployee.cs" />
+    <Compile Include="Interfaces\ISalaryCalculator.cs" />
+    <Compile Include="Practice\Employee.cs" />
+    <Compile Include="Practice\SalaryCalculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SwitchTests.cs" />
+    <Compile Include="Refactored\AdminEmployee.cs" />
+    <Compile Include="Refactored\EmployeeRefactored.cs" />
+    <Compile Include="Refactored\EngineerEmployee.cs" />
+    <Compile Include="Refactored\ManagerEmployee.cs" />
+    <Compile Include="Refactored\SalaryCalculatorRefactored.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DuplicatedCode\DuplicatedCode.csproj">
-      <Project>{316d9259-9c0d-4b36-a92a-03999d13741d}</Project>
-      <Name>DuplicatedCode</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DuplicatedSwitches\DuplicatedSwitches.csproj">
-      <Project>{74f08331-d3bb-4b6b-a8eb-3c4f811d4909}</Project>
-      <Name>DuplicatedSwitches</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

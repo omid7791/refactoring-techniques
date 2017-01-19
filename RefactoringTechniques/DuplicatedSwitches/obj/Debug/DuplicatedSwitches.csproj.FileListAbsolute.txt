@@ -1,0 +1,5 @@
+C:\Users\Omid Sharafzadeh\Desktop\refactoring-techniques\RefactoringTechniques\DuplicatedSwitches\bin\Debug\DuplicatedSwitches.dll
+C:\Users\Omid Sharafzadeh\Desktop\refactoring-techniques\RefactoringTechniques\DuplicatedSwitches\bin\Debug\DuplicatedSwitches.pdb
+C:\Users\Omid Sharafzadeh\Desktop\refactoring-techniques\RefactoringTechniques\DuplicatedSwitches\obj\Debug\DuplicatedSwitches.dll
+C:\Users\Omid Sharafzadeh\Desktop\refactoring-techniques\RefactoringTechniques\DuplicatedSwitches\obj\Debug\DuplicatedSwitches.pdb
+C:\Users\Omid Sharafzadeh\Desktop\refactoring-techniques\RefactoringTechniques\DuplicatedSwitches\obj\Debug\DuplicatedSwitches.csprojResolveAssemblyReference.cache

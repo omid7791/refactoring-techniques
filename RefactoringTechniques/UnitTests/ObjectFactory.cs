@@ -1,6 +1,10 @@
 ﻿using DuplicatedCode.Interfaces;
 using DuplicatedCode.Practice;
 using DuplicatedCode.Refactored;
+using DuplicatedSwitches.Common;
+using DuplicatedSwitches.Interfaces;
+using DuplicatedSwitches.Practice;
+using DuplicatedSwitches.Refactored;
 
 namespace UnitTests
 {
@@ -42,6 +46,15 @@ namespace UnitTests
         {
             if (UseRefactoredClasses) return new ChristmasOfferRefactored(order);
             return new ChristmasOffer(order);
+        }
+
+        public static ISalaryCalculator GetCalculator(EmployeeType employeeType)
+        {
+            var employee = new Employee(employeeType);
+            var employeeRefactored = EmployeeRefactored.Create(employeeType);
+
+            if (UseRefactoredClasses) return new SalaryCalculatorRefactored(employeeRefactored);
+            return new SalaryCalculator(employee);
         }
     }
 }
