@@ -1,17 +1,11 @@
 ﻿using System;
 using DuplicatedSwitches.Common;
-using DuplicatedSwitches.Interfaces;
 
 namespace DuplicatedSwitches.Refactored
 {
-    public abstract class EmployeeRefactored : IEmployee
+    public abstract class EmployeeRefactored
     {
-        protected EmployeeRefactored(EmployeeType type)
-        {
-            EmployeeType = type;
-        }
-
-        public static IEmployee Create(EmployeeType employeeType)
+        public static EmployeeRefactored Create(EmployeeType employeeType)
         {
             switch (employeeType)
             {
@@ -27,8 +21,6 @@ namespace DuplicatedSwitches.Refactored
         }
 
         public string Name { get; set; }
-
-        public EmployeeType EmployeeType { get; }
 
         public abstract decimal GetSalary();
     }

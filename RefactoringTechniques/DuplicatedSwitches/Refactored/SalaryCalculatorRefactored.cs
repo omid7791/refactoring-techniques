@@ -4,13 +4,13 @@ namespace DuplicatedSwitches.Refactored
 {
     public class SalaryCalculatorRefactored : ISalaryCalculator
     {
-        private readonly IEmployee _employee;
+        private readonly EmployeeRefactored _employee;
 
-        public SalaryCalculatorRefactored(IEmployee employee)
+        public SalaryCalculatorRefactored(EmployeeRefactored employee)
         {
             _employee = employee;
         }
-
+        
         public decimal GetSalary()
         {
             return _employee.GetSalary();

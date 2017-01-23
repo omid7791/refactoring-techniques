@@ -1,9 +1,8 @@
 ﻿using DuplicatedSwitches.Common;
-using DuplicatedSwitches.Interfaces;
 
 namespace DuplicatedSwitches.Practice
 {
-    public class Employee : IEmployee
+    public class Employee
     {
         public Employee(EmployeeType type)
         {
@@ -12,9 +11,5 @@ namespace DuplicatedSwitches.Practice
         public string Name { get; set; }
 
         public EmployeeType EmployeeType { get; }
-        public decimal GetSalary()
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }
