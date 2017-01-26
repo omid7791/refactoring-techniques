@@ -52,7 +52,7 @@ namespace UnitTests
         {
             var employee = new Employee(employeeType);
             var employeeRefactored = EmployeeRefactored.Create(employeeType);
-
+            
             if (UseRefactoredClasses) return new SalaryCalculatorRefactored(employeeRefactored);
             return new SalaryCalculator(employee);
         }
