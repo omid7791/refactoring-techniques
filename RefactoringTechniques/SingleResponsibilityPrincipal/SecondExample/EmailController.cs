@@ -7,7 +7,7 @@ namespace SRP.SecondExample
     {
         private readonly EmailLogger _emailLogger = new EmailLogger();
         private readonly EmailCache _emailCache = new EmailCache();
-        private readonly EmailerWithSingleResponsibility _emailer = new EmailerWithSingleResponsibility();
+        private readonly EmailSenderWithSingleResponsibility _emailSender = new EmailSenderWithSingleResponsibility();
         private readonly EmailService _emailService = new EmailService();
 
         public void SendAuthenticationEmail(int customerId)
@@ -27,7 +27,7 @@ namespace SRP.SecondExample
 
                 var emailToBeSnt = emailTemplate.Populate(customerId);
 
-                _emailer.SendAuthenticationEmail(emailToBeSnt);
+                _emailSender.SendAuthenticationEmail(emailToBeSnt);
 
                 _emailLogger.LogSuccessfulEmail(customerId);
 

@@ -2,7 +2,7 @@
 
 namespace SRP.SecondExample
 {
-    public class EmailerWithSingleResponsibility
+    public class EmailSenderWithSingleResponsibility
     {
         public void SendAuthenticationEmail(string emailToBeSnt)
         {

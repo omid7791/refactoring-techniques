@@ -55,8 +55,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SecondExample\EmailCache.cs" />
     <Compile Include="SecondExample\EmailController.cs" />
-    <Compile Include="SecondExample\Emailer.cs" />
-    <Compile Include="SecondExample\EmailerWithSingleResponsibility.cs" />
+    <Compile Include="SecondExample\EmailSender.cs" />
+    <Compile Include="SecondExample\EmailSenderWithSingleResponsibility.cs" />
     <Compile Include="SecondExample\EmailLogger.cs" />
     <Compile Include="SecondExample\MiscClasses\Cache.cs" />
     <Compile Include="SecondExample\MiscClasses\EmailService.cs" />

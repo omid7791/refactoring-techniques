@@ -3,7 +3,7 @@ using SRP.SecondExample.MiscClasses;
 
 namespace SRP.SecondExample
 {
-    public class Emailer
+    public class EmailSender
     {
         public void SendAuthenticationEmail(int customerId)
         {
