@@ -8,3 +8,6 @@ RefactoringTechniques/DuplicatedCode/obj/
 /RefactoringTechniques/UnitTests/bin/Debug
 /RefactoringTechniques/RefactoringTechniques.v11.suo
 /RefactoringTechniques/LongMethod/obj/
+/RefactoringTechniques/SingleResponsibilityPrincipal/obj/Debug
+/RefactoringTechniques/SingleResponsibilityPrincipal/bin/Debug
+/RefactoringTechniques/LongMethod/bin/Debug
